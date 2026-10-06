@@ -739,7 +739,7 @@
                     <option value="02">Fevereiro</option>
                     <option value="03">Março</option>
                     <option value="04">Abril</option>
-                    <option value="05" selected>Maio</option>
+                    <option value="05">Maio</option>
                     <option value="06">Junho</option>
                     <option value="07">Julho</option>
                     <option value="08">Agosto</option>
@@ -801,7 +801,7 @@
                     <option value="02">Fevereiro</option>
                     <option value="03">Março</option>
                     <option value="04">Abril</option>
-                    <option value="05" selected>Maio</option>
+                    <option value="05">Maio</option>
                     <option value="06">Junho</option>
                     <option value="07">Julho</option>
                     <option value="08">Agosto</option>
@@ -858,6 +858,13 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 
     <script>
+        // ==================== INICIALIZAÇÃO DO MÊS ATUAL ====================
+        // Define automaticamente os seletores para o mês atual ao carregar a página
+        const now = new Date();
+        const currentMonth = String(now.getMonth() + 1).padStart(2, '0');
+        document.getElementById('month-filter').value = currentMonth;
+        document.getElementById('filtro-mes').value = currentMonth;
+
         // ==================== FIREBASE ====================
         const firebaseConfig = {
             apiKey: "AIzaSyDiGB5e7iw6_pF7tkpcXjwf3blz7MJ1NKI",
