@@ -379,6 +379,127 @@
             margin-bottom: 20px;
         }
 
+        /* MELHORIA: Seletor de mês mais visível (Contas do Mês) */
+        .month-selector-wrapper {
+            margin: 12px 0 18px 0;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(163,99,217,0.1));
+            border-radius: 20px;
+            border: 2px solid rgba(108,92,231,0.2);
+        }
+
+        body.dark .month-selector-wrapper {
+            background: linear-gradient(135deg, rgba(108,92,231,0.15), rgba(163,99,217,0.15));
+            border: 2px solid rgba(108,92,231,0.3);
+        }
+
+        .month-selector-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        body.dark .month-selector-label {
+            color: #aaa;
+        }
+
+        #month-filter {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 18px;
+            font-weight: 700;
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            background: var(--card-bg);
+            color: #1a1a2e;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(108,92,231,0.15);
+        }
+
+        body.dark #month-filter {
+            background: #2a2a3a;
+            color: #e0e0e0;
+            border-color: var(--secondary);
+        }
+
+        #month-filter:hover {
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(108,92,231,0.25);
+            transform: translateY(-1px);
+        }
+
+        #month-filter:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 16px rgba(108,92,231,0.3);
+        }
+
+        /* MELHORIA: Seletor de mês mais visível (Lista de Compras) */
+        .shopping-month-wrapper {
+            margin: 12px 0 16px 0;
+            padding: 14px;
+            background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(163,99,217,0.1));
+            border-radius: 16px;
+            border: 2px solid rgba(108,92,231,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        body.dark .shopping-month-wrapper {
+            background: linear-gradient(135deg, rgba(108,92,231,0.15), rgba(163,99,217,0.15));
+            border: 2px solid rgba(108,92,231,0.3);
+        }
+
+        .shopping-month-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        body.dark .shopping-month-label {
+            color: #aaa;
+        }
+
+        #filtro-mes {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            background: var(--card-bg);
+            color: #1a1a2e;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(108,92,231,0.15);
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+        }
+
+        body.dark #filtro-mes {
+            background-color: #2a2a3a;
+            color: #e0e0e0;
+            border-color: var(--secondary);
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a29bfe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        }
+
+        #filtro-mes:hover {
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(108,92,231,0.25);
+        }
+
+        #filtro-mes:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 16px rgba(108,92,231,0.3);
+        }
+
         .action-buttons {
             display: flex;
             gap: 12px;
@@ -606,12 +727,34 @@
         </div>
 
         <div class="admin-card">
-            <div style="display:flex; justify-content:space-between;"><strong>💰 Planejamento Mensal</strong><select id="month-filter" onchange="changeMonthAndRender()"><option value="01">Janeiro</option><option value="02">Fevereiro</option><option value="03">Março</option><option value="04">Abril</option><option value="05">Maio</option><option value="06">Junho</option><option value="07">Julho</option><option value="08">Agosto</option><option value="09">Setembro</option><option value="10">Outubro</option><option value="11">Novembro</option><option value="12">Dezembro</option></select></div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size: 18px;">💰 Planejamento Mensal</strong>
+            </div>
+            
+            <!-- SELETOR DE MÊS MAIS VISÍVEL -->
+            <div class="month-selector-wrapper">
+                <label for="month-filter" class="month-selector-label">📅 SELECIONE O MÊS</label>
+                <select id="month-filter" onchange="changeMonthAndRender()">
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05" selected>Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+
             <div class="salary-area" style="margin-top:15px; display:flex; gap:8px; flex-wrap:wrap;">
                 <input type="number" id="salary-input" placeholder="Definir Salário do Mês" step="0.01" style="flex:2; padding:10px; border-radius:30px; border:1px solid #ddd;">
                 <button onclick="setSalary()" style="background:var(--primary); color:white; border:none; padding:10px 18px; border-radius:30px;">Salvar</button>
             </div>
-            <div id="salary-display" style="font-weight:bold;">Salário atual: R$ 0,00</div>
+            <div id="salary-display" style="font-weight:bold; margin-top:10px;">Salário atual: R$ 0,00</div>
             <div id="balance-display" style="font-size:14px; color:green;">Saldo após contas: R$ 0,00</div>
             <div id="pending-balance-display" style="font-size:14px; color:var(--danger); font-weight: bold;">Saldo a pagar: R$ 0,00</div>
             <div style="display: flex; gap: 10px; margin-top: 12px;">
@@ -640,7 +783,35 @@
                 <p style="color: var(--success);">Saldo Pago: <strong id="display-saldo-pago">R$ 0,00</strong></p>
                 <p style="color: var(--danger); font-weight: bold;">Saldo a pagar: <strong id="display-saldo-pagar">R$ 0,00</strong></p>
             </div>
-            <div class="menu-topo"><button class="btn-small bg-azul" onclick="showTabShopping('cad')">+ COMPRA</button><button class="btn-small bg-verde" onclick="showTabShopping('pago')">PAGO</button><button class="btn-small bg-vermelho" onclick="showTabShopping('n-pago')">NÃO PAGO</button><select id="filtro-mes" class="btn-small" style="background:#333; color:white;" onchange="renderListaCompras()"><option value="01">JAN</option><option value="02">FEV</option><option value="03">MAR</option><option value="04">ABR</option><option value="05">MAI</option><option value="06">JUN</option><option value="07">JUL</option><option value="08">AGO</option><option value="09">SET</option><option value="10">OUT</option><option value="11">NOV</option><option value="12">DEZ</option></select></div>
+            
+            <!-- Botões de ação mantidos intactos -->
+            <div class="menu-topo" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <button class="btn-small bg-azul" onclick="showTabShopping('cad')">+ COMPRA</button>
+                    <button class="btn-small bg-verde" onclick="showTabShopping('pago')">PAGO</button>
+                    <button class="btn-small bg-vermelho" onclick="showTabShopping('n-pago')">NÃO PAGO</button>
+                </div>
+            </div>
+
+            <!-- SELETOR DE MÊS MAIS VISÍVEL NA LISTA DE COMPRAS -->
+            <div class="shopping-month-wrapper">
+                <label for="filtro-mes" class="shopping-month-label">📅 MÊS DE REFERÊNCIA</label>
+                <select id="filtro-mes" onchange="renderListaCompras()">
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05" selected>Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+
             <div id="tab-cad" class="form-card"><input type="text" id="nome-compra" placeholder="Nome do item"><input type="number" id="valor-unit" placeholder="Valor Unitário R$" oninput="calcTotalCompra()"><div class="input-row"><input type="number" id="qtd-compra" placeholder="Qtd" oninput="calcTotalCompra()"><select id="unidade-compra"><option value="UN">UN</option><option value="CX">CX</option><option value="KG">KG</option></select></div><p>Total: <strong id="total-preview">R$ 0,00</strong></p><button onclick="addCompra()" class="btn-small bg-azul" style="width:100%;">CADASTRAR COMPRA</button></div>
             <div id="lista-compras"></div>
         </div>
@@ -710,7 +881,7 @@
             document.body.classList.remove('light', 'dark');
             document.body.classList.add(theme);
             localStorage.setItem('itv_theme', theme);
-            toggleMenu(); // fecha menu após escolha
+            toggleMenu();
         }
         function loadTheme() {
             const saved = localStorage.getItem('itv_theme');
@@ -719,7 +890,6 @@
         }
         loadTheme();
 
-        // Menu dropdown
         function toggleMenu() {
             const menu = document.getElementById('menu-dropdown');
             menu.classList.toggle('show');
