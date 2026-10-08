@@ -532,6 +532,228 @@
             margin-bottom: 20px;
         }
 
+        /* MELHORIA: Formulário de Compras (Adicionar/Editar) mais visível e maior */
+        .edit-shopping-form {
+            padding: 28px 24px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 8px 24px rgba(108,92,231,0.15);
+            margin-bottom: 24px;
+        }
+        .edit-shopping-form h3 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+        .edit-shopping-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #64748b;
+        }
+        body.dark .edit-shopping-form label {
+            color: #cbd5e1;
+        }
+        .edit-shopping-form input[type="text"],
+        .edit-shopping-form input[type="number"],
+        .edit-shopping-form select {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 1.15rem;
+            background: #f8fafc;
+            transition: all 0.2s;
+            color: #1a1a2e;
+        }
+        body.dark .edit-shopping-form input[type="text"],
+        body.dark .edit-shopping-form input[type="number"],
+        body.dark .edit-shopping-form select {
+            background: #2a2a3a;
+            color: #e0e0e0;
+            border-color: #475569;
+        }
+        .edit-shopping-form input[type="text"]:focus,
+        .edit-shopping-form input[type="number"]:focus,
+        .edit-shopping-form select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(108,92,231,0.15);
+        }
+        .edit-shopping-form .total-preview-box {
+            background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(163,99,217,0.1));
+            padding: 16px;
+            border-radius: 16px;
+            border: 2px solid rgba(108,92,231,0.2);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        body.dark .edit-shopping-form .total-preview-box {
+            background: linear-gradient(135deg, rgba(108,92,231,0.15), rgba(163,99,217,0.15));
+            border-color: rgba(108,92,231,0.3);
+        }
+        .edit-shopping-form .total-preview-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+        body.dark .edit-shopping-form .total-preview-label {
+            color: #cbd5e1;
+        }
+        .edit-shopping-form .total-preview-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-top: 4px;
+        }
+        .edit-shopping-form .btn-save-compra {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: 40px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(108,92,231,0.3);
+            transition: transform 0.1s, background 0.2s;
+        }
+        .edit-shopping-form .btn-save-compra:hover {
+            background: var(--primary-dark);
+        }
+        .edit-shopping-form .btn-save-compra:active {
+            transform: scale(0.97);
+        }
+        .edit-shopping-form .btn-cancel-compra {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: 40px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            background: #f1f3f5;
+            color: #64748b;
+            margin-top: 10px;
+            transition: transform 0.1s, background 0.2s;
+        }
+        body.dark .edit-shopping-form .btn-cancel-compra {
+            background: #2a2a3a;
+            color: #cbd5e1;
+        }
+        .edit-shopping-form .btn-cancel-compra:hover {
+            background: #e2e8f0;
+        }
+        body.dark .edit-shopping-form .btn-cancel-compra:hover {
+            background: #334155;
+        }
+        .edit-shopping-form .btn-cancel-compra:active {
+            transform: scale(0.97);
+        }
+
+        /* MELHORIA: Janela Editar Conta mais visível e maior */
+        #edit-form {
+            padding: 28px 24px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 8px 24px rgba(108,92,231,0.15);
+        }
+        #edit-form h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        #edit-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #64748b;
+        }
+        body.dark #edit-form label {
+            color: #cbd5e1;
+        }
+        #edit-form input[type="text"],
+        #edit-form input[type="date"],
+        #edit-form input[type="number"] {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 1.15rem;
+            background: #f8fafc;
+            transition: all 0.2s;
+        }
+        body.dark #edit-form input[type="text"],
+        body.dark #edit-form input[type="date"],
+        body.dark #edit-form input[type="number"] {
+            background: #2a2a3a;
+            color: #e0e0e0;
+            border-color: #475569;
+        }
+        #edit-form input[type="text"]:focus,
+        #edit-form input[type="date"]:focus,
+        #edit-form input[type="number"]:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(108,92,231,0.15);
+        }
+        #edit-form .edit-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        #edit-form .btn-save {
+            flex: 2;
+            padding: 16px;
+            border-radius: 40px;
+            background: var(--success);
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,184,148,0.3);
+            transition: transform 0.1s, background 0.2s;
+        }
+        #edit-form .btn-save:hover {
+            background: #00a383;
+        }
+        #edit-form .btn-save:active {
+            transform: scale(0.97);
+        }
+        #edit-form .btn-cancel {
+            flex: 1;
+            padding: 16px;
+            border-radius: 40px;
+            background: #f1f3f5;
+            color: #64748b;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s, background 0.2s;
+        }
+        body.dark #edit-form .btn-cancel {
+            background: #2a2a3a;
+            color: #cbd5e1;
+        }
+        #edit-form .btn-cancel:hover {
+            background: #e2e8f0;
+        }
+        body.dark #edit-form .btn-cancel:hover {
+            background: #334155;
+        }
+        #edit-form .btn-cancel:active {
+            transform: scale(0.97);
+        }
+
         .bill-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -763,8 +985,29 @@
             </div>
         </div>
         <div class="action-buttons"><button class="btn-action btn-action-primary" onclick="toggleForm()">+ NOVO</button><button class="btn-action" onclick="filterType('pago')">✅ PAGO</button><button class="btn-action" onclick="filterType('pendente')">⚠️ A VENCER</button></div>
+        
         <div id="bill-form" class="form-card hidden"><h3>➕ Cadastrar Conta</h3><input type="text" id="bill-name" placeholder="Nome da Conta" style="width:100%; margin:8px 0; padding:12px;"><input type="date" id="bill-date"><input type="number" id="bill-value" placeholder="Valor R$" step="0.01"><button onclick="saveBill()" style="background:var(--success); color:white; width:100%; padding:12px; border-radius:30px;">CADASTRAR</button></div>
-        <div id="edit-form" class="form-card hidden"><h3>✏️ Editar Conta</h3><input type="hidden" id="edit-bill-id"><input type="text" id="edit-bill-name"><input type="date" id="edit-bill-date"><input type="number" id="edit-bill-value"><div style="display:flex; gap:10px;"><button onclick="updateBill()" style="background:var(--success); flex:2;">SALVAR</button><button onclick="toggleEditForm()">CANCELAR</button></div></div>
+        
+        <!-- JANELA EDITAR CONTA MELHORADA -->
+        <div id="edit-form" class="form-card hidden">
+            <h3>✏️ Editar Conta</h3>
+            <input type="hidden" id="edit-bill-id">
+            
+            <label for="edit-bill-name">Nome da Conta</label>
+            <input type="text" id="edit-bill-name" placeholder="Ex: Luz, Água, Internet">
+            
+            <label for="edit-bill-date">Data de Vencimento</label>
+            <input type="date" id="edit-bill-date">
+            
+            <label for="edit-bill-value">Valor (R$)</label>
+            <input type="number" id="edit-bill-value" placeholder="0,00" step="0.01">
+            
+            <div class="edit-actions">
+                <button class="btn-save" onclick="updateBill()">SALVAR ALTERAÇÕES</button>
+                <button class="btn-cancel" onclick="toggleEditForm()">CANCELAR</button>
+            </div>
+        </div>
+
         <div id="bills-container"></div>
     </div>
 
@@ -812,7 +1055,42 @@
                 </select>
             </div>
 
-            <div id="tab-cad" class="form-card"><input type="text" id="nome-compra" placeholder="Nome do item"><input type="number" id="valor-unit" placeholder="Valor Unitário R$" oninput="calcTotalCompra()"><div class="input-row"><input type="number" id="qtd-compra" placeholder="Qtd" oninput="calcTotalCompra()"><select id="unidade-compra"><option value="UN">UN</option><option value="CX">CX</option><option value="KG">KG</option></select></div><p>Total: <strong id="total-preview">R$ 0,00</strong></p><button onclick="addCompra()" class="btn-small bg-azul" style="width:100%;">CADASTRAR COMPRA</button></div>
+            <!-- FORMULÁRIO DE COMPRAS MELHORADO (MAIOR E MAIS VISÍVEL) -->
+            <div id="tab-cad" class="form-card edit-shopping-form">
+                <h3 id="shopping-form-title">🛒 Adicionar Compra</h3>
+                
+                <label for="nome-compra">Nome do Item</label>
+                <input type="text" id="nome-compra" placeholder="Ex: Arroz, Feijão, Leite">
+                
+                <label for="valor-unit">Valor Unitário (R$)</label>
+                <input type="number" id="valor-unit" placeholder="0,00" step="0.01" oninput="calcTotalCompra()">
+                
+                <div style="display: flex; gap: 12px;">
+                    <div style="flex: 1;">
+                        <label for="qtd-compra">Quantidade</label>
+                        <input type="number" id="qtd-compra" placeholder="1" step="0.1" oninput="calcTotalCompra()">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="unidade-compra">Unidade</label>
+                        <select id="unidade-compra">
+                            <option value="UN">UN</option>
+                            <option value="CX">CX</option>
+                            <option value="KG">KG</option>
+                            <option value="PCT">PCT</option>
+                            <option value="LT">LT</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="total-preview-box">
+                    <div class="total-preview-label">Total Previsto</div>
+                    <div class="total-preview-value" id="total-preview">R$ 0,00</div>
+                </div>
+                
+                <button onclick="addCompra()" id="btn-add-compra" class="btn-save-compra">💾 SALVAR COMPRA</button>
+                <button onclick="cancelEditCompra()" id="btn-cancel-compra" class="btn-cancel-compra" style="display: none;">❌ CANCELAR EDIÇÃO</button>
+            </div>
+
             <div id="lista-compras"></div>
         </div>
     </div>
@@ -1123,8 +1401,78 @@
             document.getElementById('display-saldo-pago').innerHTML = `R$ ${totalPago.toFixed(2)}`;
             document.getElementById('display-saldo-pagar').innerHTML = `R$ ${totalAPagar.toFixed(2)}`;
         }
+        
         function calcTotalCompra(){ const v=parseFloat(document.getElementById('valor-unit').value)||0; const q=parseFloat(document.getElementById('qtd-compra').value)||0; document.getElementById('total-preview').innerText=`R$ ${(v*q).toFixed(2)}`; }
-        async function addCompra(){ const nome=document.getElementById('nome-compra').value, valor=parseFloat(document.getElementById('valor-unit').value), qtd=parseFloat(document.getElementById('qtd-compra').value), unidade=document.getElementById('unidade-compra').value, mes=document.getElementById('filtro-mes').value; if(!nome||isNaN(valor)||isNaN(qtd)) return alert("Preencha corretamente"); const nova={ id:Date.now(), nome, valor, qtd, unidade, total:valor*qtd, pago:false, mes }; if(editShoppingIdx!==null){ compras[editShoppingIdx]=nova; editShoppingIdx=null; }else compras.push(nova); await saveShoppingData(); renderListaCompras(); document.getElementById('nome-compra').value=''; document.getElementById('valor-unit').value=''; document.getElementById('qtd-compra').value=''; document.getElementById('total-preview').innerText='R$ 0,00'; showToast("Item adicionado!");}
+        
+        async function addCompra(){ 
+            const nome = document.getElementById('nome-compra').value; 
+            const valor = parseFloat(document.getElementById('valor-unit').value); 
+            const qtd = parseFloat(document.getElementById('qtd-compra').value); 
+            const unidade = document.getElementById('unidade-compra').value; 
+            const mes = document.getElementById('filtro-mes').value; 
+            
+            if(!nome || isNaN(valor) || isNaN(qtd)) return alert("Preencha corretamente todos os campos!"); 
+            
+            const id = editShoppingIdx !== null ? compras[editShoppingIdx].id : Date.now();
+            const nova = { id, nome, valor, qtd, unidade, total: valor*qtd, pago: false, mes }; 
+            
+            if(editShoppingIdx !== null){ 
+                compras[editShoppingIdx] = nova; 
+                editShoppingIdx = null; 
+                showToast("Compra atualizada com sucesso!");
+            } else {
+                compras.push(nova); 
+                showToast("Item adicionado!");
+            }
+            
+            resetShoppingForm();
+            await saveShoppingData(); 
+            renderListaCompras(); 
+        }
+
+        function resetShoppingForm() {
+            document.getElementById('nome-compra').value = ''; 
+            document.getElementById('valor-unit').value = ''; 
+            document.getElementById('qtd-compra').value = ''; 
+            document.getElementById('unidade-compra').value = 'UN';
+            document.getElementById('total-preview').innerText = 'R$ 0,00';
+            document.getElementById('btn-cancel-compra').style.display = 'none';
+            document.getElementById('btn-add-compra').innerHTML = '💾 SALVAR COMPRA';
+            document.getElementById('shopping-form-title').innerHTML = '🛒 Adicionar Compra';
+        }
+
+        function cancelEditCompra() {
+            editShoppingIdx = null;
+            resetShoppingForm();
+        }
+
+        function editCompra(id){ 
+            const item = compras.find(c => c.id === id); 
+            if(!item) return; 
+            
+            document.getElementById('nome-compra').value = item.nome; 
+            document.getElementById('valor-unit').value = item.valor; 
+            document.getElementById('qtd-compra').value = item.qtd; 
+            document.getElementById('unidade-compra').value = item.unidade || 'UN'; 
+            
+            editShoppingIdx = compras.findIndex(c => c.id === id); 
+            
+            // Atualiza UI para modo de edição
+            document.getElementById('btn-add-compra').innerHTML = '💾 ATUALIZAR COMPRA';
+            document.getElementById('btn-cancel-compra').style.display = 'block';
+            document.getElementById('shopping-form-title').innerHTML = '✏️ Editando: ' + item.nome;
+            
+            calcTotalCompra(); 
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        }
+        
+        async function deletarCompra(id){ 
+            compras=compras.filter(c=>c.id!==id); 
+            await saveShoppingData(); 
+            renderListaCompras(); 
+            showToast("Item removido"); 
+        }
+        
         async function pagarCompra(id){ 
             const idx=compras.findIndex(c=>c.id===id); 
             if(idx===-1) return; 
@@ -1140,23 +1488,7 @@
             renderListaCompras(); 
             showToast("Pagamento registrado! Botões PAGAR e EDITAR ocultos."); 
         }
-        async function deletarCompra(id){ 
-            compras=compras.filter(c=>c.id!==id); 
-            await saveShoppingData(); 
-            renderListaCompras(); 
-            showToast("Item removido"); 
-        }
-        function editCompra(id){ 
-            const item=compras.find(c=>c.id===id); 
-            if(!item) return; 
-            document.getElementById('nome-compra').value=item.nome; 
-            document.getElementById('valor-unit').value=item.valor; 
-            document.getElementById('qtd-compra').value=item.qtd; 
-            document.getElementById('unidade-compra').value=item.unidade||'UN'; 
-            editShoppingIdx=compras.findIndex(c=>c.id===id); 
-            calcTotalCompra(); 
-            window.scrollTo(0,0); 
-        }
+        
         async function fixarSaldoAlimentacao(){ const mes = document.getElementById('filtro-mes').value; const valor = parseFloat(document.getElementById('saldo-alim').value); if(isNaN(valor)){ alert("Digite um valor numérico válido!"); return; } saldosMensais[mes] = valor; await saveShoppingData(); renderListaCompras(); showToast(`Saldo de alimentação fixado em R$ ${valor.toFixed(2)} para ${mes}/2025`); }
         function editarSaldoAlimentacao(){ document.getElementById('saldo-alim').disabled = false; document.getElementById('btn-fixar-alim').style.display = 'block'; document.getElementById('btn-editar-alim').style.display = 'none'; document.getElementById('saldo-alim').focus(); }
         function showTabShopping(type){ if(type==='pago') renderListaCompras('pago'); else if(type==='n-pago') renderListaCompras('n-pago'); else renderListaCompras('todos'); }
